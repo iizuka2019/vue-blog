@@ -21,6 +21,8 @@
       <v-btn color="pink" flat @click="snackbar = false">Close</v-btn>
     </v-snackbar>
 
+    <p style="display: none;" id="twitter-title">{{ post.title }}</p>
+
   </div>
 </template>
 

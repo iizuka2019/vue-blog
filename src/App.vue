@@ -150,10 +150,11 @@
       },
       tweet () {
         var s, url
-        s = (!this.post || !this.post.title) ? this.$BlogTitle : this.post.title
+        var title = document.getElementById('twitter-title').textContent
+        s = (!title || title.length == 0) ? this.$BlogTitle : title
         // s   = this.post.title
         if (this.author.twitter_handle.length > 0) {
-          s = '@' + this.author.twitter_handle + 'さんから ' + " - " + s + "%0a"
+          s = '@' + this.author.twitter_handle + 'さんから - ' + s + "%0a"
         }
         url = document.location.href
         if (s != "") {
