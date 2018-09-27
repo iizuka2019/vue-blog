@@ -9,8 +9,7 @@
         <div v-for="(post, post_id) in posts" :key="post_id">
           <v-slide-x-transition hide-on-leave>
             <v-card class="ma-1" v-show="post_id == (page - 1)">
-              <v-img height="220" :src="post.featured_image" v-if="post.featured_image"></v-img>
-              <v-img height="220" :src="defaultImg"          v-else></v-img>
+              <v-img :height="clientSize()" :src="getDefaultImage(post)"></v-img>
               <v-card-title primary-title class="pt-1 pb-1">
                 <div style="width: 100%" class="text-xs-center">
                   <v-chip v-if="post.tags.length == 0">未分類</v-chip>
@@ -32,7 +31,7 @@
         <v-pagination :length="pageCount" :total-visible="5" v-model="page" circle></v-pagination>
       </v-flex>
       <v-flex xs12 sm10 md8>
-        <router-view :author="author" :posts="posts" :tags="tags"></router-view>
+        <router-view :author="author" :posts="posts" :tags="tags" id="content"></router-view>
       </v-flex>
     </v-layout>
     <v-layout row fill-height wrap v-else style="min-height: 300px;">
@@ -66,10 +65,8 @@ export default {
   data () {
     return {
       posts      : [],
-      // post       : null,
       tags       : [],
       selectTag  : null,
-      defaultImg : require('../assets/article.jpg'),
       page       : 1,
       pageCount  : 0,
       message    : null,
@@ -82,7 +79,7 @@ export default {
     getPosts (pagePos, pageSize = this.pageChunk) {
       this.loading = true
       // var option = { page: pagePos, page_size: pageSize }
-      var option = {}
+      var option = { status: 'published' }
       if (this.selectTag != null) {
         option.tag_slug = this.selectTag
       }
@@ -161,6 +158,11 @@ export default {
     },
     search () {
 
+    },
+    $route (to, from) {
+      if (to.name == 'BlogDetail' || to.name == 'BlogChart') {
+        setTimeout(() => { this.$vuetify.goTo('#content') }, 600)
+      }
     },
   },
   created() {

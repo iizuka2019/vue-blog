@@ -159,9 +159,7 @@ export default {
         let a = postDate.filter((val) => { return val == day })
         lineData.push(a.length)
       })
-
-      console.log(this.labels)
-
+      // console.log(this.labels)
 
       this.chart = {
         labels   : this.labels.pie,
