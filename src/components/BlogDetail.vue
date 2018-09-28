@@ -29,7 +29,7 @@
 <style>
 .title-bg { background: rgba(0, 0, 0, 0.7) }
 #post-body img { max-width: 100% !important; margin-top: 8px; margin-bottom: 10px; }
-#post-body * { letter-spacing: 2px; line-height: 1.8em; }
+#post-body * { letter-spacing: 2px; line-height: 1.6em; }
 #post-body p { font-size: 110%; margin: 8px 0; }
 #post-body h1 { margin-bottom: 8px; position: relative; background: #B3E5FC; box-shadow: 0px 0px 0px 5px #B3E5FC; border: dashed 2px white; padding: 0.2em 0.5em; color: #454545; margin: 24px 0; }
 #post-body h1:after{ position: absolute; content: ''; left: -7px; top: -7px; border-width: 0 0 15px 15px; border-style: solid; border-color: #fff #fff #9FA8DA; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15); }
