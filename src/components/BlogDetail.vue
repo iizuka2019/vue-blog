@@ -29,13 +29,13 @@
 <style>
 .title-bg { background: rgba(0, 0, 0, 0.7) }
 #post-body img { max-width: 100% !important; margin-top: 8px; margin-bottom: 10px; }
-#post-body * { letter-spacing: 2px; line-height: 1.6em; }
-#post-body p { font-size: 110%; margin: 8px 0; }
+#post-body * { letter-spacing: 4px; line-height: 1.8em; }
+#post-body p { font-size: 120%; margin: 8px 0; }
 #post-body h1 { margin-bottom: 8px; position: relative; background: #B3E5FC; box-shadow: 0px 0px 0px 5px #B3E5FC; border: dashed 2px white; padding: 0.2em 0.5em; color: #454545; margin: 24px 0; }
 #post-body h1:after{ position: absolute; content: ''; left: -7px; top: -7px; border-width: 0 0 15px 15px; border-style: solid; border-color: #fff #fff #9FA8DA; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15); }
 #post-body h2 { margin-bottom: 8px; padding: 8px 0; position: relative; }
 #post-body h2:after { content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 7px; background: -webkit-repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px); background: repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px); }
-#post-body h3 { margin-bottom: 8px; position: relative; padding-left: 1.5em; line-height: 1.4; }
+#post-body h3 { margin: 12px 0; position: relative; padding-left: 1.5em; line-height: 2.0; }
 #post-body h3:before{ font-family: "Font Awesome 5 Free"; content: "＊"; position: absolute; font-size: 1.4em; left: 0; top: -0.2em; color: #FFB300; }
 #post-body blockquote * { font-size: 95%; }
 #post-body blockquote { position: relative; padding: 5px 12px 5px 56px; box-sizing: border-box; font-style: italic; color: #464646; background: #fff4db; }
