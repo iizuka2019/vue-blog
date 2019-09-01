@@ -17,7 +17,7 @@ Vue.use(Vuetify, {
   }
 })
 
-Vue.prototype.$BlogTitle = "your blog title"
+Vue.prototype.$BlogTitle = "夏休み旅行のためだけの日記"
 
 /* eslint-disable no-new */
 const app = new Vue({
